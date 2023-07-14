@@ -1,0 +1,156 @@
+li {
+  list-style: none;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: all ease-in-out 0.3s;
+}
+.navbar li a:hover {
+  color: #ff08ce;
+}
+
+.logo-anchor {
+  display: flex;
+  height: fit-content;
+  padding: 0 1rem;
+}
+
+.logo-anchor:hover {
+  transform: scale(0.95);
+  filter: opacity(0.7);
+}
+
+.brand {
+  width: 70px;
+  border-radius: 1rem;
+}
+
+.navbar-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 0.5rem;
+  overflow: hidden;
+  padding: 0 10%;
+  height: max-content;
+}
+.navbar-container::before {
+  backdrop-filter: blur(100px);
+  z-index: -1;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.154);
+  padding: 0.5rem 0rem;
+  border-radius: 1rem;
+  z-index: 0;
+}
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle-btn {
+  display: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.action-btn {
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: radial-gradient(
+    circle at center,
+    rgb(255, 39, 39),
+    rgb(50, 50, 255),
+    #ff08ce
+  );
+  background-size: 400% 400%;
+  position: relative;
+  animation: cambiar 8s ease-in-out infinite;
+  margin: 0 1rem;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+.action-btn:active {
+  scale: 0.95;
+}
+
+.dropdown-menu {
+  display: none;
+  position: relative;
+  height: 0;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.154);
+  backdrop-filter: blur(100px);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+  height: 204px;
+}
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu .action-btn {
+  display: flex;
+  justify-content: center;
+  margin: 0 2rem 0.5rem;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action-btn {
+    display: none;
+  }
+
+  .navbar .toggle-btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu {
+    width: 100%;
+  }
+}
