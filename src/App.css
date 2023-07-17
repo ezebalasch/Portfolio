@@ -1,12 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@100;300;400;500;600;700&display=swap");
 
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --color-primary: #999933;
+  --color-secondary: #c2c247;
+  --color-tertiary: #d1d175;
+  --color-quaternary: #e0e0a3;
+  --color-quinary: #f0f0d1;
+  --color-senary: #fafaf0;
+  --color-white-background: #99993351;
+  --color-green-hover: #99993385;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-button {
+  height: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 #root {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
 body {
-  background: #000000;
+  background: var(--color-quinary);
+  color: var(--color-primary);
 }
 
 @keyframes cambiar {

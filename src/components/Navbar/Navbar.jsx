@@ -1,7 +1,8 @@
 import "./Navbar.css";
 import { FaBars, FaXmark } from "react-icons/fa6";
-import Image from "/logo.jpg";
+import Image from "/logo.png";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -12,6 +13,7 @@ const menuItems = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   const handleOnClick = () => {
     setOpen(!open);
@@ -28,7 +30,12 @@ const Navbar = () => {
         <ul className="links">
           {menuItems.map((menuItems, index) => (
             <li key={index}>
-              <a href={menuItems.href}>{menuItems.label}</a>
+              <a
+                className={location.pathname === menuItems.href ? "active" : ""}
+                href={menuItems.href}
+              >
+                {menuItems.label}
+              </a>
             </li>
           ))}
         </ul>
@@ -42,7 +49,12 @@ const Navbar = () => {
       <div className={open ? "dropdown-menu open" : "dropdown-menu"}>
         {menuItems.map((menuItems, index) => (
           <li key={index}>
-            <a href={menuItems.href}>{menuItems.label}</a>
+            <a
+              className={location.pathname === menuItems.href ? "active" : ""}
+              href={menuItems.href}
+            >
+              {menuItems.label}
+            </a>
           </li>
         ))}
         <a href="#" className="action-btn">

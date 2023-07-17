@@ -1,5 +1,58 @@
+@import url("./../../App.css");
+
 .home {
   width: 100%;
   height: 100vw;
-  color: aliceblue;
+  color: var(--color-primary);
+}
+
+.header-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6vh;
+  text-align: center;
+}
+.header {
+  display: flex;
+  font-size: 8vh;
+  font-weight: 700;
+  z-index: -3;
+}
+.header-subtitle {
+  padding: 1rem;
+}
+
+.profile-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6vh;
+  text-align: center;
+  background-color: var(--color-secondary);
+}
+
+.about-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6vh;
+  text-align: center;
+}
+
+.projects-container {
+  background-color: var(--color-tertiary);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6vh;
+  text-align: center;
 }

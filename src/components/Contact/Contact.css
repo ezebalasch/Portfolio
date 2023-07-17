@@ -1,3 +1,5 @@
+@import url("./../../App.css");
+
 .contact {
-  color: aliceblue;
+  color: var(--color-primary);
 }
