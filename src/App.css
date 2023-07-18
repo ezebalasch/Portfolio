@@ -7,11 +7,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --color-primary: #023e8a;
-  --color-secondary: #00b4d8;
-  --color-tertiary: #48cae4;
-  --color-quaternary: #90e0ef;
+  --color-secondary: #03d5fe;
+  --color-tertiary: #64e0f9;
+  --color-quaternary: #9bf0ff;
   --color-quinary: #ade8f4;
-  --color-senary: #caf0f8;
+  --color-senary: #e7f8fb;
   --color-white-background: #3873c065;
   --color-green-hover: #023d8a87;
 }
@@ -43,7 +43,7 @@
 }
 
 body {
-  background: var(--color-quinary);
+  background: var(--color-senary);
   color: var(--color-primary);
 }
 
