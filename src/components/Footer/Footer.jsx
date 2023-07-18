@@ -10,8 +10,8 @@ const Footer = () => {
           <div className="first-column">
             <span>Ezequiel Balasch</span>
             <div className="first-column-description">
-              A Full Stack Web Developer building the Frontend of Websites and
-              Web Applications that leads to the success of the overall product
+              A Full Stack Web Developer building Websites and Web Applications
+              that leads to the success of the overall product
             </div>
           </div>
           <div className="second-column">

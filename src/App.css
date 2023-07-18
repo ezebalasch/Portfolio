@@ -6,14 +6,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --color-primary: #999933;
-  --color-secondary: #c2c247;
-  --color-tertiary: #d1d175;
-  --color-quaternary: #e0e0a3;
-  --color-quinary: #f0f0d1;
-  --color-senary: #fafaf0;
-  --color-white-background: #99993351;
-  --color-green-hover: #99993385;
+  --color-primary: #023e8a;
+  --color-secondary: #00b4d8;
+  --color-tertiary: #48cae4;
+  --color-quaternary: #90e0ef;
+  --color-quinary: #ade8f4;
+  --color-senary: #caf0f8;
+  --color-white-background: #3873c065;
+  --color-green-hover: #023d8a87;
 }
 
 ::-webkit-scrollbar {

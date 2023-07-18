@@ -1,5 +1,6 @@
 import "./Home.css";
 import { Fade } from "react-awesome-reveal";
+import perfil from "./../../assets/perfil.png";
 
 const Home = () => {
   return (
@@ -10,7 +11,48 @@ const Home = () => {
           <div className="header-subtitle">Full Stack Web Developer</div>
         </Fade>
       </div>
-      <div className="profile-container">row</div>
+      <div className="profile-container">
+        <Fade direction="left" cascade>
+          <div className="profile-card">
+            <div className="profile-card-description">
+              s sint aliquid odit quo beatae illo iure repellat, voluptate at id
+              culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Ipsa facilis vel nam cumque, similique reiciendis accusamus quidem
+              fugit omnis ea molestias soluta delectus totam at natus? Vitae
+              quod laboriosam illo! Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Vel fugit facere fuga quidem quaerat ipsam
+              blanditiis
+            </div>
+            <div className="profile-card-img">
+              <img
+                className="image-profile"
+                src={perfil}
+                alt="Ezequiel Balasch"
+              />
+            </div>
+          </div>
+        </Fade>
+        {/* <Fade direction="right" cascade>
+          <div className="profile-card">
+            <div className="profile-card-description">
+              s sint aliquid odit quo beatae illo iure repellat, voluptate at id
+              culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Ipsa facilis vel nam cumque, similique reiciendis accusamus quidem
+              fugit omnis ea molestias soluta delectus totam at natus? Vitae
+              quod laboriosam illo! Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Vel fugit facere fuga quidem quaerat ipsam
+              blanditiis
+            </div>
+            <div className="profile-card-img">
+              <img
+                className="image-profile"
+                src={perfil}
+                alt="Ezequiel Balasch"
+              />
+            </div>
+          </div>
+        </Fade> */}
+      </div>
       <div className="about-container">row</div>
       <div className="projects-container">row</div>
 
