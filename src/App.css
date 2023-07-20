@@ -7,7 +7,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --color-primary: #023e8a;
-  --color-secondary: #03d5fe;
+  --color-secondary: #05bee3;
   --color-tertiary: #64e0f9;
   --color-quaternary: #9bf0ff;
   --color-quinary: #ade8f4;
@@ -45,6 +45,7 @@
 body {
   background: var(--color-senary);
   color: var(--color-primary);
+  overflow-x: hidden;
 }
 
 @keyframes cambiar {

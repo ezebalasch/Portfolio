@@ -45,6 +45,8 @@ a {
   overflow: hidden;
   padding: 0 10%;
   height: max-content;
+  position: fixed;
+  z-index: 3;
 }
 
 .navbar {
@@ -57,6 +59,7 @@ a {
   justify-content: space-between;
   padding: 0.5rem 0rem;
   border-radius: 3rem;
+  position: relative;
   z-index: 3;
   backdrop-filter: blur(4px);
   transition: all ease-in-out 0.5s;

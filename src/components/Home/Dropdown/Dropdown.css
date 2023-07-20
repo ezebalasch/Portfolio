@@ -1,0 +1,60 @@
+.about-experience-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown-experience {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem;
+  margin: 1rem 2rem;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.396);
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.dropdown-content.opened {
+  max-height: 100%;
+  background-color: var(--color-senary);
+  width: 90%;
+  border-radius: 5px;
+}
+.dropdown-opened-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 1% 5%;
+}
+.dropdown-opened-card-company {
+  width: 70%;
+  font-weight: 700;
+  text-align: left;
+}
+.dropdown-opened-card-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dropdown-opened-card-description {
+  padding-left: 2%;
+  font-weight: 300;
+}
+
+.linksite {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+}
