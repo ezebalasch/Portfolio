@@ -45,7 +45,7 @@ const DropdownItem = ({ work }) => {
             {work.company}
             {work.link !== "" ? (
               <span>
-                <a className="linksite" href={work.link}>
+                <a target="_blank" className="linksite" href={work.link}>
                   <FaLink />{" "}
                 </a>
               </span>

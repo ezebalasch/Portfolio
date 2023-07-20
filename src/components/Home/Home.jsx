@@ -1,7 +1,7 @@
 import "./Home.css";
 import { Fade } from "react-awesome-reveal";
-import perfil from "./../../assets/perfil.png";
 import Dropdown from "./Dropdown/Dropdown";
+import ProfileCard from "./ProfileCard/ProfileCard";
 
 const Home = () => {
   return (
@@ -14,28 +14,7 @@ const Home = () => {
       </div>
       <div className="profile-container">
         <Fade direction="up" duration={800} triggerOnce={true} reset={true}>
-          <div className="profile-card-container">
-            <div className="profile-card">
-              <div className="profile-card-img">
-                <img
-                  className="image-profile"
-                  src={perfil}
-                  alt="Ezequiel Balasch"
-                />
-              </div>
-              <div className="profile-card-description">
-                I live in Mendoza, Argentina.I am an enthusiastic Full Stack
-                Programmer with experience in Java, JavaScript, React, Thymeleaf
-                and Spring Boot. I also have a solid track record as a
-                programming teacher at the primary and secondary levels, which
-                has allowed me to develop exceptional communication and teamwork
-                skills. My passion for programming motivates me to continue
-                growing and learning in this industry. I have an advanced level
-                of English, which allows me to interact effectively in
-                international environments.
-              </div>
-            </div>
-          </div>
+          <ProfileCard />
         </Fade>
       </div>
       <div className="about-container">
