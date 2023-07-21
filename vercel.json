@@ -1,8 +1,3 @@
 {
-  "routes": [
-    {
-      "src": "https://portfolio-sigma-smoky-69.vercel.app//(about|projects|contact|.*)",
-      "dest": "/index.html"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
