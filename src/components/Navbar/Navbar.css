@@ -130,7 +130,7 @@ a {
 }
 
 .dropdown-menu.open {
-  height: 204px;
+  height: fit-content;
 }
 
 .dropdown-menu li a {
@@ -154,7 +154,7 @@ a {
 .dropdown-menu .action-btn {
   display: flex;
   justify-content: center;
-  margin: 0 2rem 0.5rem;
+  margin: 0.5rem 2rem 0.5rem;
   align-items: center;
 }
 

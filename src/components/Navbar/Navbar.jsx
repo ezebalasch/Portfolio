@@ -1,8 +1,10 @@
 import "./Navbar.css";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import Image from "/logo.png";
+import { saveAs } from "file-saver";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import cv from "./../../assets/resume.pdf";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -17,6 +19,11 @@ const Navbar = () => {
 
   const handleOnClick = () => {
     setOpen(!open);
+  };
+
+  const handleDownload = () => {
+    const pdfFilename = "Ezequiel_Balasch_Resume.pdf";
+    saveAs(cv, pdfFilename);
   };
 
   return (
@@ -39,9 +46,10 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <a href="#" className="action-btn">
+        <a className="action-btn" onClick={handleDownload}>
           Download Resume
         </a>
+
         <button onClick={() => handleOnClick()} className="toggle-btn">
           {open ? <FaXmark /> : <FaBars />}
         </button>
@@ -57,7 +65,7 @@ const Navbar = () => {
             </a>
           </li>
         ))}
-        <a href="#" className="action-btn">
+        <a className="action-btn" onClick={handleDownload}>
           Download Resume
         </a>
       </div>

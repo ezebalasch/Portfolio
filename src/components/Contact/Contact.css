@@ -2,7 +2,7 @@
 
 .contact {
   color: var(--color-primary);
-  height: 90vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,9 +101,6 @@ textarea:focus {
 }
 
 @media (max-width: 500px) {
-  .contact {
-    padding: 0;
-  }
   .contact-form-container {
     width: 80%;
   }
