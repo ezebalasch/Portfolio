@@ -107,5 +107,6 @@ textarea:focus {
   input,
   textarea {
     width: 90%;
+    font-size: 1.1rem;
   }
 }
