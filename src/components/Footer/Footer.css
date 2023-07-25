@@ -64,10 +64,6 @@
   font-size: 3rem;
   padding: 0 0.3rem;
 }
-.second-column-icons a svg {
-  height: 100%;
-  width: 100%;
-}
 .second-column-icons a :hover {
   transform: translateY(-5px);
   transition: all ease-in-out 0.3s;
