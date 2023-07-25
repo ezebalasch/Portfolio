@@ -1,0 +1,42 @@
+@import url("./../../../App.css");
+
+.about-title {
+  padding-top: 4rem;
+  display: flex;
+  font-size: 7vh;
+  font-weight: 700;
+}
+
+.about-columns {
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  column-gap: 4rem;
+  text-align: left;
+  justify-content: center;
+}
+
+.about-col-one {
+  width: 30%;
+}
+
+.about-col-two {
+  width: 30%;
+}
+
+.about-first {
+  font-weight: 700;
+  font-size: 4vh;
+}
+
+.about-second {
+  font-weight: 500;
+  font-size: 3vh;
+}
+
+.lighter {
+  color: var(--color-secondary);
+  text-decoration: underline dotted;
+}

@@ -1,0 +1,45 @@
+@import url("./../../../App.css");
+
+.skill {
+  text-align: left;
+  padding-top: 4rem;
+}
+.icons {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  row-gap: initial;
+  flex-wrap: wrap;
+}
+
+.title-icons {
+  font-weight: 500;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  text-decoration: underline wavy 2px;
+}
+
+.display-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container svg {
+  padding: 1rem;
+  color: var(--color-secondary);
+  transition: all ease 1s;
+}
+
+.icon-container svg:hover {
+  transform: scale(1.3);
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}

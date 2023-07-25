@@ -1,5 +1,112 @@
 @import url("./../../App.css");
 
 .about {
-  color: aliceblue;
+  color: var(--color-primary);
+  height: fit-content;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh;
+  text-align: center;
+}
+
+.about-img {
+  max-width: 300px;
+  border-radius: 1rem 10rem;
+  transition: all 1s;
+}
+
+.about-img:hover {
+  border-radius: 10rem 1rem;
+}
+.timeline-education {
+  width: 95%;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.study-header {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--color-primary);
+  width: 100%;
+}
+.study {
+  border-radius: 4rem;
+  color: var(--color-primary);
+  margin: 1.3rem;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.study-cols {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  transition: all 1s;
+  border-bottom: 2px solid var(--color-quinary);
+}
+.col-one {
+  width: 20%;
+  font-weight: 700;
+  border-radius: 4rem;
+  padding: 1.5rem;
+}
+.col-one-descrip {
+  font-weight: 300;
+}
+.col-two {
+  height: fit-content;
+}
+
+.study-img {
+  width: 10vw;
+  max-height: fit-content;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: all ease 1s;
+}
+
+.study-img:hover {
+  width: 20vw;
+}
+.col-three {
+  width: 20%;
+}
+
+.about-card {
+  background: var(--color-secondary);
+  width: 90%;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+  text-align: center;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.exp {
+  margin-top: 2rem;
+}
+
+.experience {
+  text-align: right;
+  padding-top: 5rem;
+}
+
+.col-two-exp {
+  height: fit-content;
+  width: 50%;
+}
+@media (max-width: 1140px) {
 }

@@ -48,19 +48,6 @@
   text-align: center;
 }
 
-.about-card {
-  background: var(--color-secondary);
-  width: 90%;
-  padding: 2rem;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  backdrop-filter: blur(2px);
-  text-align: center;
-  justify-content: flex-start;
-  display: flex;
-}
-
 .about-header {
   color: white;
   font-size: 2.5rem;

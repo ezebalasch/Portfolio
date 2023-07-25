@@ -44,6 +44,7 @@
   align-items: center;
   flex-direction: row;
   padding: 1% 5%;
+  font-size: 1.35rem;
 }
 .dropdown-opened-card-company {
   width: 70%;
@@ -69,5 +70,8 @@
 @media (max-width: 576px) {
   .dropdown-experience {
     font-size: 1.4rem;
+  }
+  .dropdown-opened-card {
+    font-size: 1rem;
   }
 }
