@@ -38,19 +38,21 @@ const About = () => {
                     <div className="col-one-descrip">{study.company}</div>
                   </div>
                   <div className="col-two">
-                    {isMobile ? (
-                      <a className="link" href={study.link}>
-                        <FaLink />
-                      </a>
-                    ) : (
-                      <a href={study.link} target="_blank" exp>
-                        <img
-                          className="study-img"
-                          src={study.img}
-                          alt={study.title}
-                        />
-                      </a>
-                    )}
+                    {isMobile
+                      ? study.img && (
+                          <a className="link" href={study.link}>
+                            <FaLink />
+                          </a>
+                        )
+                      : study.img && (
+                          <a href={study.link} target="_blank" exp>
+                            <img
+                              className="study-img"
+                              src={study.img}
+                              alt={study.title}
+                            />
+                          </a>
+                        )}
                   </div>
                   <div className="col-three">{study.date}</div>
                 </div>
@@ -59,7 +61,7 @@ const About = () => {
         </Fade>
       </div>
       <div className="timeline-education">
-        <div className="study-header experience">workExperience</div>
+        <div className="study-header experience">Experience</div>
         <Fade direction="right" cascade triggerOnce={true} reset={true}>
           {workExperience &&
             workExperience.map((work, index) => (
@@ -85,7 +87,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="col-two-exp">
-                    {work.description && <p>{work.description}</p>}
+                    {isMobile ? "" : <p>{work.description}</p>}
                   </div>
                   <div className="col-three">{work.date}</div>
                 </div>

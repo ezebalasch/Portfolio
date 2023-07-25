@@ -118,4 +118,7 @@
     transition: all 1s;
     border-bottom: 2px solid var(--color-quinary);
   }
+  .experience {
+    font-size: 2.8rem;
+  }
 }
