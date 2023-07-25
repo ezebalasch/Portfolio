@@ -101,7 +101,7 @@ textarea:focus {
   font-family: "Inter", sans-serif;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .contact-form-container {
     width: 80%;
   }
@@ -109,5 +109,9 @@ textarea:focus {
   textarea {
     width: 90%;
     font-size: 1.1rem;
+  }
+  .input-button {
+    width: fit-content;
+    padding: 1rem;
   }
 }
