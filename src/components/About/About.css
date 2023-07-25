@@ -12,12 +12,6 @@
   text-align: center;
 }
 
-.about-img {
-  max-width: 300px;
-  border-radius: 1rem 10rem;
-  transition: all 1s;
-}
-
 .about-img:hover {
   border-radius: 10rem 1rem;
 }
@@ -108,5 +102,20 @@
   height: fit-content;
   width: 50%;
 }
-@media (max-width: 1140px) {
+
+.link {
+  color: var(--color-primary);
+}
+@media (max-width: 840px) {
+  .about {
+    padding: 1rem;
+  }
+  .study-cols {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    transition: all 1s;
+    border-bottom: 2px solid var(--color-quinary);
+  }
 }

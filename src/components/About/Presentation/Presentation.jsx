@@ -8,7 +8,13 @@ const Presentation = () => {
     <>
       <div className="about-title">I'm Ezequiel.</div>
       <div className="about-columns">
-        <Fade direction="left" cascade triggerOnce={true} reset={true}>
+        <Fade
+          className="fade"
+          direction="left"
+          cascade
+          triggerOnce={true}
+          reset={true}
+        >
           <div className="about-col-one">
             <img
               className="about-img"

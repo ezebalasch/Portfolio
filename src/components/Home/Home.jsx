@@ -14,7 +14,13 @@ const Home = () => {
         </Fade>
       </div>
       <div className="profile-container">
-        <Fade direction="up" duration={800} triggerOnce={true} reset={true}>
+        <Fade
+          className="profile-fade"
+          direction="up"
+          duration={800}
+          triggerOnce={true}
+          reset={true}
+        >
           <ProfileCard />
         </Fade>
       </div>

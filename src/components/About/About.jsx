@@ -5,8 +5,24 @@ import { studentTrayectory } from "./../data/studentTrayectory";
 import { FaLink } from "react-icons/fa6";
 import Presentation from "./Presentation/Presentation";
 import Skills from "./Skills/Skills";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const About = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  const isMobile = windowWidth <= 768;
   return (
     <div className="about">
       <Presentation />
@@ -22,7 +38,11 @@ const About = () => {
                     <div className="col-one-descrip">{study.company}</div>
                   </div>
                   <div className="col-two">
-                    {study.img && (
+                    {isMobile ? (
+                      <a className="link" href={study.link}>
+                        <FaLink />
+                      </a>
+                    ) : (
                       <a href={study.link} target="_blank" exp>
                         <img
                           className="study-img"
