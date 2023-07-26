@@ -130,7 +130,7 @@ a {
 }
 
 .dropdown-menu.open {
-  height: fit-content;
+  height: 217px;
 }
 
 .dropdown-menu li a {
