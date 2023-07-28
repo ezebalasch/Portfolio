@@ -111,6 +111,7 @@ a {
 
 .action-btn:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .action-btn:active {

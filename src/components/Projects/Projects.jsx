@@ -1,58 +1,74 @@
 import "./Projects.css";
+import { projectardos } from "./../data/projectardos";
+import { FaGithub, FaLinkedinIn, FaLink, FaYoutube } from "react-icons/fa6";
 
 const Projects = () => {
   return (
     <div className="projects">
-      {" "}
-      Home Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
-      omnis assumenda. Consequuntur magni odio cumque quae nobis facilis sint
-      aliquid odit quo beatae illo iure repellat, voluptate at id culpa. Lorem
-      ipsum dolor sit amet consectetur adipisicing elit. Ipsa facilis vel nam
-      cumque, similique reiciendis accusamus quidem fugit omnis ea molestias
-      soluta delectus totam at natus? Vitae quod laboriosam illo! Lorem ipsum
-      dolor sit, amet consectetur adipisicing elit. Vel fugit facere fuga quidem
-      quaerat ipsam blanditiis veniam nulla, cupiditate recusandae, non sequi
-      officiis, molestiae rem illum accusantium sint? Eum, aliquid. Lorem ipsum,
-      dolor sit amet consectetur adipisicing elit. Eius quod labore quis
-      voluptatibus odit aliquam incidunt distinctio repudiandae? Nulla minus
-      cupiditate sunt dolore voluptatibus adipisci consequuntur dolores
-      consectetur eius architecto. Lorem ipsum dolor sit, amet consectetur
-      adipisicing elit. Qui molestiae cupiditate eveniet quis porro
-      exercitationem, ullam magni dolores. Consequatur corrupti exercitationem
-      dolorum quod. Repellendus consequatur, voluptatum nisi quibusdam
-      cupiditate perferendis. Home Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Repellendus, omnis assumenda. Consequuntur magni odio
-      cumque quae nobis facilis sint aliquid odit quo beatae illo iure repellat,
-      voluptate at id culpa. Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Ipsa facilis vel nam cumque, similique reiciendis accusamus quidem
-      fugit omnis ea molestias soluta delectus totam at natus? Vitae quod
-      laboriosam illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-      Vel fugit facere fuga quidem quaerat ipsam blanditiis veniam nulla,
-      cupiditate recusandae, non sequi officiis, molestiae rem illum accusantium
-      sint? Eum, aliquid. Lorem ipsum, dolor sit amet consectetur adipisicing
-      elit. Eius quod labore quis voluptatibus odit aliquam incidunt distinctio
-      repudiandae? Nulla minus cupiditate sunt dolore voluptatibus adipisci
-      consequuntur dolores consectetur eius architecto. Lorem ipsum dolor sit,
-      amet consectetur adipisicing elit. Qui molestiae cupiditate eveniet quis
-      porro exercitationem, ullam magni dolores. Consequatur corrupti
-      exercitationem dolorum quod. Repellendus consequatur, voluptatum nisi
-      quibusdam cupiditate perferendis. Home Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Repellendus, omnis assumenda. Consequuntur
-      magni odio cumque quae nobis facilis sint aliquid odit quo beatae illo
-      iure repellat, voluptate at id culpa. Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Ipsa facilis vel nam cumque, similique
-      reiciendis accusamus quidem fugit omnis ea molestias soluta delectus totam
-      at natus? Vitae quod laboriosam illo! Lorem ipsum dolor sit, amet
-      consectetur adipisicing elit. Vel fugit facere fuga quidem quaerat ipsam
-      blanditiis veniam nulla, cupiditate recusandae, non sequi officiis,
-      molestiae rem illum accusantium sint? Eum, aliquid. Lorem ipsum, dolor sit
-      amet consectetur adipisicing elit. Eius quod labore quis voluptatibus odit
-      aliquam incidunt distinctio repudiandae? Nulla minus cupiditate sunt
-      dolore voluptatibus adipisci consequuntur dolores consectetur eius
-      architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-      molestiae cupiditate eveniet quis porro exercitationem, ullam magni
-      dolores. Consequatur corrupti exercitationem dolorum quod. Repellendus
-      consequatur, voluptatum nisi quibusdam cupiditate perferendis.
+      <div className="contact-header">Projects</div>
+      <div className="card-container">
+        {projectardos &&
+          projectardos.map((project, index) => (
+            <div key={index} className="card">
+              <div className="image-section">
+                <img
+                  src={project.image}
+                  className="project-image"
+                  alt={project.name}
+                />
+                <div className="image-tech-container">
+                  <div className="tech-initial">
+                    {project.github && (
+                      <a
+                        target="_blank"
+                        href={project.github}
+                        className="prj-icon"
+                      >
+                        <FaGithub />
+                      </a>
+                    )}
+                    {project.linkedin && (
+                      <a
+                        target="_blank"
+                        href={project.linkedin}
+                        className="prj-icon"
+                      >
+                        <FaLinkedinIn />
+                      </a>
+                    )}
+                    {project.website && (
+                      <a
+                        target="_blank"
+                        href={project.website}
+                        className="prj-icon"
+                      >
+                        <FaLink />
+                      </a>
+                    )}
+                    {project.youtube && (
+                      <a
+                        target="_blank"
+                        href={project.youtube}
+                        className="prj-icon"
+                      >
+                        <FaYoutube />
+                      </a>
+                    )}
+                  </div>
+                  <div className="tech-final">
+                    {project.technologies.map((technology, index) => (
+                      <div key={index} className="txt-icon">
+                        {technology}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="project-name">{project.name}</div>
+              <div className="description-section">{project.description}</div>
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
