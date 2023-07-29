@@ -31,7 +31,11 @@ const Projects = () => {
         {!list.length &&
           Array.from({ length: 6 }).map((index) => (
             <div key={index}>
-              <Skeleton variant="rectangular" width={448} height={273} />
+              <Skeleton
+                className="skeleton"
+                variant="rectangular"
+                height={250}
+              />
               <Skeleton width="100%" />
             </div>
           ))}
