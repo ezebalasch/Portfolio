@@ -3,8 +3,36 @@ import { Fade } from "react-awesome-reveal";
 import Dropdown from "./Dropdown/Dropdown";
 import ProfileCard from "./ProfileCard/ProfileCard";
 import Contact from "../Contact/Contact";
+import { useEffect, useState } from "react";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  limit,
+  query,
+} from "firebase/firestore";
+import Card from "../Projects/Card/Card";
+import { Skeleton } from "@mui/material";
 
 const Home = () => {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    const db = getFirestore();
+    const refCollection = collection(db, "projects");
+
+    const queryLimitThree = query(refCollection, limit(3));
+
+    getDocs(queryLimitThree).then((snapshot) => {
+      setList(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+      );
+    });
+  }, []);
+
   return (
     <>
       <div className="header-container">
@@ -30,7 +58,23 @@ const Home = () => {
           <Dropdown />
         </div>
       </div>
-      <div className="projects-container">row</div>
+      <div className="projects-container">
+        <div className="project-col-one">
+          {!list.length &&
+            Array.from({ length: 3 }).map((index) => (
+              <div key={index}>
+                <Skeleton variant="rectangular" width={448} height={273} />
+                <Skeleton width="100%" />
+              </div>
+            ))}
+          {list && list.map((card) => <Card key={card.id} {...card} />)}
+        </div>
+        <div className="project-col-two">
+          <a href="/projects" className="input-button">
+            View More
+          </a>
+        </div>
+      </div>
 
       <Contact />
     </>

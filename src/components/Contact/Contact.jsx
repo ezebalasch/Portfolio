@@ -38,7 +38,7 @@ const Contact = () => {
       Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "Your email has been sended",
+        title: "Your email has been sent",
         showConfirmButton: false,
         timer: 1500,
         customClass: {
