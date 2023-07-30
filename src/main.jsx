@@ -4,12 +4,12 @@ import App from "./App";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCY5vWVLS95AyAzTlrGTXjDQ9MhWJo0rVg",
-  authDomain: "portfolio-ezeb.firebaseapp.com",
-  projectId: "portfolio-ezeb",
-  storageBucket: "portfolio-ezeb.appspot.com",
-  messagingSenderId: "775014833641",
-  appId: "1:775014833641:web:91f4b157ee956cb432bf78",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 initializeApp(firebaseConfig);

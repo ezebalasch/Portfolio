@@ -9,6 +9,7 @@ import {
   getDocs,
   getFirestore,
   limit,
+  orderBy,
   query,
 } from "firebase/firestore";
 import Card from "../Projects/Card/Card";
@@ -21,9 +22,13 @@ const Home = () => {
     const db = getFirestore();
     const refCollection = collection(db, "projects");
 
-    const queryLimitThree = query(refCollection, limit(3));
+    const querySortedDesc = query(
+      refCollection,
+      orderBy("number", "asc"),
+      limit(3)
+    );
 
-    getDocs(queryLimitThree).then((snapshot) => {
+    getDocs(querySortedDesc).then((snapshot) => {
       setList(
         snapshot.docs.map((doc) => ({
           id: doc.id,
