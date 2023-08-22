@@ -42,7 +42,7 @@ const Home = () => {
     <>
       <div className="header-container">
         <Fade direction="down" cascade triggerOnce={true} reset={true}>
-          <div className="header">Hi! I'm Ezequiel Balasch</div>
+          <h1 className="header">Hi! I'm Ezequiel Balasch</h1>
           <div className="header-subtitle">Full Stack Web Developer</div>
         </Fade>
       </div>
