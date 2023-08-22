@@ -1,5 +1,5 @@
 import "./ProfileCard.css";
-import perfil from "./../../../assets/perfil.png";
+import perfil from "./../../../assets/fotoperfil.png";
 
 const ProfileCard = () => {
   return (

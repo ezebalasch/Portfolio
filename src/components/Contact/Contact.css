@@ -2,13 +2,13 @@
 
 .contact {
   color: var(--color-primary);
-  height: 95vh;
+  height: 100vh;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6vh;
+  padding: 6vh 0;
   text-align: center;
 }
 
@@ -36,7 +36,7 @@
 
 input,
 textarea {
-  margin: 1rem;
+  margin: 0.7rem;
   width: 85%;
   height: 3rem;
   border-radius: 1rem;
@@ -79,8 +79,8 @@ textarea:focus {
   background: var(--color-primary);
   color: #fff;
   cursor: pointer;
-  font-size: 2rem;
-  height: 5rem;
+  font-size: 1.7rem;
+  height: 3rem;
   transition: 0.2s;
   width: 17rem;
   border-radius: 1rem;
@@ -112,7 +112,6 @@ textarea:focus {
   }
   .input-button {
     width: fit-content;
-    padding: 1rem;
   }
   .contact {
     padding: 1rem;

@@ -1,5 +1,5 @@
 import { Fade } from "react-awesome-reveal";
-import photo from "./../../../assets/perfil.png";
+import photo from "./../../../assets/fotoperfil.png";
 
 import "./Presentation.css";
 

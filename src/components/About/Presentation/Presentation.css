@@ -13,12 +13,13 @@
 
 .about-img {
   max-width: 300px;
-  border-radius: 1rem 10rem;
+  border-radius: 3rem;
   transition: all 1s;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
+  background: var(--color-quaternary);
 }
 
 .about-columns {
